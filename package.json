@@ -1,0 +1,19 @@
+{
+  "name": "light-scores",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:ffreemt/light-scores.git",
+  "author": "freemt",
+  "scripts": {
+    "start": "pyright && pytest && yarn style",
+    "test": "nodemon -w tests -w light_scores -x pytest tests",
+    "pyright": "nodemon -w light_scores -w .venv -e .py -x pyright light_scores tests",
+    "pytest": "nodemon -w tests -w light_scores -e .py -x pytest tests",
+    "style": "nodemon -w light_scores -w tests -x \"black tests light_scores && python -m flake8\"",
+    "docstyle": "nodemon -w light_scores -w tests -x pydocstyle --convention=google tests light_scores",
+    "pylint": "nodemon -w light_scores -e .py -x pylint light_scores",
+    "test:light_scores": "nodemon -w tests -e .py -x pytest -k light_scores tests",
+    "publish": "poetry build && poetry publihs"
+  },
+  "license": "MIT"
+}
