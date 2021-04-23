@@ -83,7 +83,7 @@ def light_scores(
     tokenized_corpus = token_list_en
     logger.debug(f" tokenized_corpus: {tokenized_corpus[:10]}")
 
-    logger.debug(f" query: {token_list_tr[:10}")
+    logger.debug(f" query: {token_list_tr[:10]}")
 
     # tokenized_corpus = []
     if not tokenized_corpus:
