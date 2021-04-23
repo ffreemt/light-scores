@@ -27,6 +27,12 @@ def light_scores(
     remove_stopwords: bool = False
     clean: bool = True
     lower: bool = True
+
+    import nltk
+    nltk.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
+    nltk.download('wordnet')
+    nltk.download('stopwords')
     """
     if isinstance(text_en, str):
         text_en = [elm.strip() for elm in text_en.splitlines() if elm.strip()]
@@ -72,12 +78,12 @@ def light_scores(
         token_list_en = remove_(token_list_en)
         token_list_tr = remove_(token_list_tr)
 
-        logger.debug(f" stopwords removed: {token_list_en}")
+        logger.debug(f" stopwords removed: {token_list_en[:10]}")
 
     tokenized_corpus = token_list_en
-    logger.debug(f" tokenized_corpus: {tokenized_corpus}")
+    logger.debug(f" tokenized_corpus: {tokenized_corpus[:10]}")
 
-    logger.debug(f" query: {token_list_tr}")
+    logger.debug(f" query: {token_list_tr[:10}")
 
     # tokenized_corpus = []
     if not tokenized_corpus:
