@@ -1,6 +1,6 @@
 {
   "name": "light-scores",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "repository": "git@github.com:ffreemt/light-scores.git",
   "author": "freemt",
