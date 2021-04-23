@@ -60,7 +60,7 @@ def light_scores(
     token_list_en = seg_to_words(text_en, norm)
     token_list_tr = seg_to_words(text_tr, norm)
 
-    # logger.debug(f" befoe stopwords removed: {token_list_en}")
+    # logger.debug(f" befoe stopwords removed, token_list_en[:10: {token_list_en[:10}")
 
     # lowercase, clean, split,
     if remove_stopwords:
