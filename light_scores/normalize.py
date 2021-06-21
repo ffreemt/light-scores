@@ -25,6 +25,8 @@ def normalize(text: str) -> List[str]:
 
     [lemmatize(word, convert_tag(tag)) for word, tag in pos_tag(word_tokenize(text))]
 
+    20s/1000 lines shakespeare
+    3min 35s 210s/lines shakespeare
     >>> text = 'I am loving it'
     >>> normalize('I am loving it')[1] in ["be"]
     True

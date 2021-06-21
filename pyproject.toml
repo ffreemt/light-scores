@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "light-scores"
-version = "0.1.2-alpha.0"
+version = "0.1.2"
 description = ""
 authors = ["freemt"]
 license = "MIT"
@@ -12,6 +12,7 @@ python = "^3.7"
 loguru = "^0.5.3"
 rank-bm25 = "^0.2.1"
 nltk = "^3.6.2"
+logzero = "^1.7.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

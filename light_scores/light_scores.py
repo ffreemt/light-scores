@@ -5,11 +5,13 @@ import numpy as np
 import nltk
 from rank_bm25 import BM25Okapi
 
-from loguru import logger
+# from loguru import logger
+import logzero
+from logzero import logger
 
 from light_scores.normalize import normalize
 
-
+logzero.loglevel(20)
 PUNCTUATION = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 
 
@@ -97,4 +99,5 @@ def light_scores(
         corr_mat.append(corr)
 
     # return np.array([1])
-    return np.array(corr_mat)
+    # return np.array(corr_mat)
+    return np.array(corr_mat).T
