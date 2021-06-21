@@ -1,5 +1,5 @@
 """Calculate bm scores of two list."""
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 from .light_scores import light_scores
 
 __all__ = (
